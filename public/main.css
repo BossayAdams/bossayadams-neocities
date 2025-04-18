@@ -1,0 +1,315 @@
+/* Fonts */
+
+@font-face
+{
+    font-family:'ComicSans';
+    src: url('./fonts/comicsans.woff2') format('woff2'),
+    url('./fonts/comicsans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face
+{
+    font-family:'TimesNewRoman';
+    src: url('./fonts/times.woff2') format('woff2'),
+    url('./fonts/times.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+/* Common */
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.pagewrapper {
+    max-width: 100vw;
+    height: 100%;
+    overflow: auto;
+}
+
+.centered {
+    text-align: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.left {
+    text-align: left;
+}
+
+.squeeze {
+    width: 75%;
+    margin: 0 auto 50px;
+}
+
+.showbar {
+    overflow-y: scroll;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid p {
+    max-width: 150px;
+    margin: 0 auto 5px;
+}
+
+.grid a, .accordionstyle .grid img, .musicstyle .grid img{
+    padding: 5px 15px;
+}
+
+.accordionstyle .grid img, .musicstyle .grid img {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+
+.grid a img, .grid p img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 6.25px;
+    margin: 0 5px;
+}
+
+video {
+    height: 350px;
+    display: block;
+    margin: 20px auto 0;
+}
+
+/* Collapsibles */
+
+.collapsible {
+    background: rgba(0,0,0,0);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    text-align: left;
+    transition: color 0.2s ease-in-out;
+    position: relative;
+    right: 5px;
+}
+
+.collapsecontent {
+    display: none;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.active {
+    font-weight: bold;
+}
+
+/* Sidebar & Main Content */
+
+.sidebar {
+    border-right: 6px ridge;
+    border-color: white;
+    width: 20%;
+    min-height: 100%;
+    text-align: center;
+}
+
+.sidebarwrapper {
+    max-width: 100vw;
+    height: 100%;
+    display: flex;
+}
+
+.sidebarbutton {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 0.8em;
+    margin: 1em auto;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.25vw;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.sidebarbutton:hover {
+    color: royalblue;
+    text-decoration: underline;
+}
+
+.maincontent {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/* Page Backgrounds */
+
+.mainstyle {
+    background-image: linear-gradient(
+        to bottom,
+        SlateBlue, #945bcd
+    );
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    color: white;
+    font-family: "ComicSans";
+}
+
+.musicstyle {
+    background-image: url("./music/images/musictile.png");
+    background-repeat: repeat;
+    color: black;
+    font-family: "ComicSans";
+}
+
+.accordionstyle {
+    background-color: #5E423A;
+    color: #ffefe6;
+    font-family: "TimesNewRoman";
+}
+
+.artstyle {
+    background-image: linear-gradient(
+        to bottom,
+        #ff8080, #ffcc80, #ffff80, #80ff80, #80bfff, #b380ff, #ff80ff, #ff8080
+    );
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+    color: black;
+    font-family: "ComicSans";
+}
+
+.artpagestyle {
+    background-color: white;
+    color: black;
+    font-family: "ComicSans";
+}
+
+.gamesstyle {
+    background-color: black;
+    color: rgb(11, 218, 81);
+    font-family: "TimesNewRoman";
+}
+
+.miscstyle {
+    background-color: black;
+    color: white;
+    font-family: "TimesNewRoman";
+}
+
+/* Music Elements */
+
+.musiccollapse {
+    color: black;
+    font-family: "ComicSans";
+}
+
+.info {
+    width: 50%;
+}
+
+.audio {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio p {
+    position: relative;
+    margin: 0;
+}
+
+.audio audio {
+    margin-bottom: 20px;
+}
+
+/* Accordion Elements */
+
+.accordionstyle h2 {
+    padding-top: 25px;
+}
+
+.accordionstyle h1, .accordionstyle h2 {
+    position: relative;
+    right: 25px;
+}
+
+/* Art Elements */
+
+.artframe {
+    height: 68vh;
+    width: 83vw;
+    background-color: white;
+    box-shadow: 5px 5px rgba(0,70,100,0.2);
+    margin-left: 13px;
+}
+
+.artpagestyle tr, td {
+    max-width: 250px;
+    padding: 20px;
+}
+
+.artpagestyle img {
+    max-width: 250px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.artpagestyle img:hover {
+    cursor: zoom-in;
+}
+
+/* Games Elements */
+
+.gamescollapse {
+    font-family: "TimesNewRoman";
+    text-align: center;
+    position: relative;
+    left: 0;
+    margin-top: 10px;
+}
+
+/* Page Link Styles */
+
+.pagewrapper a {
+    transition: color 0.2s ease-in-out;
+}
+
+.mainstyle .pagewrapper a, .miscstyle a, .gamesstyle a, .gamescollapse {
+    color: white;
+}
+
+.accordionstyle a {
+    color: #ffefe6;
+}
+
+.mainstyle .pagewrapper a:hover, .miscstyle a:hover, .accordionstyle a:hover {
+    color: lightblue;
+}
+
+.artstyle a, .musicstyle a {
+    color: black;
+}
+
+.artstyle a:hover, .musicstyle a:hover, .musiccollapse:hover {
+    color: royalblue;
+}
+
+.gamesstyle a:hover, .gamescollapse:hover {
+    color: lightgray;
+}
