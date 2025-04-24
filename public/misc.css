@@ -79,6 +79,35 @@ video {
     margin: auto;
 }
 
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid p {
+    max-width: 150px;
+    margin: 0 auto 5px;
+}
+
+.creaturestyle .grid img{
+    padding: 5px 15px;
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+}
+
+.grid a img, .grid p img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 6.25px;
+    margin: 0 5px;
+}
+
+.zoom:hover {
+    cursor: zoom-in;
+}
+
 /* Collapsibles */
 
 .collapsible {
@@ -104,26 +133,15 @@ video {
 }
 
 .collapsible img {
-    width: 20px
-    height: 20px;
-    margin: -20px;
+    width: 30px;
+    height: 30px;
+    margin: -30px;
     position: relative;
-    bottom: 10px;
-    left: 20px;
+    bottom: 20px;
+    left: 30px;
 }
 
 /* Page Backgrounds */
-
-.mainstyle {
-    background-image: linear-gradient(
-        to bottom,
-        SlateBlue, #945bcd
-    );
-    background-attachment: fixed;
-    background-size: 100vw 100vh;
-    color: white;
-    font-family: "ComicSans";
-}
 
 .storiesstyle {
     background-image: url(./misc/images/storiesbg.jpg);
@@ -150,6 +168,14 @@ video {
     color: #181818;
     font-family: "Pokemon";
     font-size: 22px;
+}
+
+.creaturestyle {
+    background-image: url("./misc/images/creaturesbg.png");
+    background-repeat: repeat;
+    color: rgb(120, 55, 150);
+    font-family: "FinkHeavy";
+    font-size: 20px;
 }
 
 .logstyle {
