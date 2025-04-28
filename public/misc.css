@@ -215,19 +215,26 @@ video {
 
 /* Pokemon Elements */
 
-.pokemonstyle tr, td {
+.pokemonstyle tr, .pokemonstyle td {
     max-width: 200px;
     padding: 5px;
     border: 2px outset #181818;
 }
 
+.pokemonstyle td, .pokemonstyle th {
+    overflow-wrap: anywhere;
+    font-size: 24px;
+}
+
 .pokemonstyle table {
     width: 100%;
+    table-layout: fixed;
     text-align: center;
 }
 
 .pokemonstyle table img {
-    height: 100px;
+    height: 50%;
+    max-width: 100%;
 }
 
 .pokemoncollapse {
