@@ -120,11 +120,18 @@ video {
 .sidebar {
     border-right: 6px ridge;
     border-color: white;
-    width: 20%;
-    min-height: 100%;
-    text-align: center;
-    overflow-y: auto;
+    width: 18vw;
     overflow-x: hidden;
+    display: flex;
+    flex-flow: column;
+}
+
+.buttoncenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .sidebarwrapper {
@@ -138,11 +145,10 @@ video {
     border: 2px solid;
     color: black;
     padding: 2vh 1vw;
-    margin: 2.5vh auto;
+    margin: 1.25vh;
     width: 50%;
     text-align: center;
     text-decoration: none;
-    display: block;
     font-size: 2.4vh;
     cursor: pointer;
     transition: color 0.2s ease-in-out;
